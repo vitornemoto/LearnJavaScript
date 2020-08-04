@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Exercicio 1</title>
+    </head>
+    <body>
+        <script>
+            function EnderecoExtenso(){
+                var endereco = {
+                    rua: "Rua dos pinheiros",
+                    numero: 1293,
+                    bairro:"Centro",
+                    cidade:"São Paulo",
+                    uf:"SP"
+                }
+
+                return `O usuário mora em ${endereco.cidade}/${endereco.uf}, no bairro ${endereco.bairro}, na rua "${endereco.rua}" com numero ${endereco.numero}.`
+            }
+
+            let resultado =  EnderecoExtenso();
+            console.log(resultado);
+            document.write(resultado);
+        </script>
+    </body>
+</html>

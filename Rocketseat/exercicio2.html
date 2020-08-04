@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <script>
+            function pares(x,y){
+                //código aqui
+                let numerosPares;
+                for (i=x; i <= y; i++){
+                    if(i % 2 == 0){
+                        if ( numerosPares == ""){
+                            numerosPares += i }
+                        else{
+                            numerosPares += ", "+i
+                        }
+                    }
+                }
+                return numerosPares;
+            }
+
+            console.log(pares(32,321));
+        </script>
+    </body>
+</html>
