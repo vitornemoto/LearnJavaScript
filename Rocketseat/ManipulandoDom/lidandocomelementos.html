@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" id="nome">
+    </div>
+
+    <script>
+        // vai ter o mesmo resultado que usar <a href="http://rocketseat.com.br><a/>"
+
+        let linkElement = document.createElement('a');
+
+        linkElement.setAttribute('href', 'http://rocketseat.com.br');
+
+        // adiciona o node de texto como filho do linkElement    
+        var textElement = document.createTextNode('Acessar site da Rocketseat');
+        linkElement.appendChild(textElement);
+
+        // adiciona o linkElement a div com classe app
+        var conteinerElement = document.querySelector('#app');
+        conteinerElement.appendChild(linkElement);
+
+        var inputElement = document.querySelector('#nome');
+        conteinerElement.removeChild(inputElement);
+
+
+    </script>
+    
+</body>
+</html>
