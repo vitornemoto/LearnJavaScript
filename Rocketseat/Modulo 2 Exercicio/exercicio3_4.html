@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="nome">
+    <button onClick="adicionar()">Adicionar</button>
+
+    <script>
+        var nomes = ["Diego","Gabriel","Lucas"];
+
+        var ulElement = document.createElement("ul");
+
+        for (let i = 0; i < nomes.length; i++) {
+            var nome = nomes [i];
+
+            var liElement = document.createElement("li");
+
+            liElement.textContent = nome;
+
+            ulElement.appendChild(liElement);
+                        
+        }
+
+        function adicionar(){
+            var inputElement = document.querySelector("input");
+            
+            var liElement = document.createElement("li");
+
+            liElement.textContent = inputElement.value;
+
+            ulElement.appendChild(liElement);
+
+            inputElement.value = "";
+        }
+
+        var bodyElement = document.querySelector("body");
+        bodyElement.appendChild(ulElement);
+    </script>
+</body>
+</html>
